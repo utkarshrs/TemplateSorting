@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+
+template<class sort>
+void sorting(sort* a,int size)
+{
+   int i,j;
+   sort temp;   
+   for(i=0;i<size;i++)
+   {
+      for(j=i;j<size;j++)
+      {
+         if(a[i]>a[j])
+         {
+            temp=a[i];
+            a[i]=a[j];
+            a[j]=temp;
+         }
+      }
+   }
+}           
+
+template<class sort>
+void display(sort* a,int size)
+{
+   int i;
+   for(i=0;i<size;i++)
+   cout<<" "<<a[i];
+}       
+
+        
+int main()
+{ 
+ int arr1[]={2,3,4,8,7,6};
+ float arr2[]={1.1,2,4,5.6,7.9};
+ char arr3[]="utkarsh";
+
+ sorting(arr1,6);
+ display(arr1,6);
+
+ cout<<"\n";
+ sorting(arr2,5);
+ display(arr2,5);
+
+cout<<"\n";
+ sorting(arr3,7);
+ display(arr3,7);
+}           
